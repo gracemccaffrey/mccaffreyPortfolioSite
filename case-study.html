@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthHub Case Study | Grace McCaffrey</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Keep the same global theme -->
+    <link rel="stylesheet" href="css/theme.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/case-study.css" />
+  </head>
+
+  <body>
+    <!-- NAV (same look as homepage) -->
+    <header class="site-header">
+      <div class="container nav">
+        <div class="nav-spacer" aria-hidden="true"></div>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-small" href="index.html">Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- 0) Breadcrumb -->
+      <section class="crumbs">
+        <div class="container">
+          <a class="crumb-link" href="index.html#projects" aria-label="Back to homepage projects">
+            <i data-lucide="arrow-left"></i>
+            Back to Projects
+          </a>
+        </div>
+      </section>
+
+      <!-- 1) HERO / PROJECT OVERVIEW -->
+      <section class="heroCase">
+        <div class="container heroCase-inner">
+          <div class="heroCase-card">
+            <div class="heroCase-grid">
+              <div class="heroCase-media">
+                <!-- Use your real screenshot here -->
+                <img
+                  class="heroCase-img"
+                  src="assets/HHCover.png"
+                  alt="HealthHub interface preview"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="heroCase-info">
+                <h1 class="heroCase-title">HealthHub</h1>
+                <p class="heroCase-subtitle">
+                  A health literacy and awareness platform that helps underserved communities find care and
+                  understand healthcare basics.
+                </p>
+
+                <div class="factsGrid" aria-label="Quick project facts">
+                  <div class="factPill"><span class="k">Role</span><span class="v">Front-End / Full-Stack Developer</span></div>
+                  <div class="factPill"><span class="k">Timeline</span><span class="v">Jan – Apr 2025</span></div>
+                  <div class="factPill"><span class="k">Team</span><span class="v">Team of 5</span></div>
+                  <div class="factPill"><span class="k">Platform</span><span class="v">Progressive Web App</span></div>
+                  <div class="factPill"><span class="k">Focus</span><span class="v">Health Literacy • Access • Offline Support</span></div>
+                </div>
+
+                <div class="heroCase-actions">
+                  <a class="btn btn-primary" href="#" id="liveDemoBtn">View Live Demo</a>
+                  <a class="btn btn-outline" href="#" id="reportBtn">Full Technical Report (PDF)</a>
+                </div>
+
+                <p class="muted heroCase-note">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2) PROBLEM STATEMENT -->
+      <section class="section section--tint">
+        <div class="container section-grid-2">
+          <div class="card">
+            <h2 class="section-title">Problem Statement</h2>
+            <div class="divider"></div>
+            <p>
+              Many individuals face barriers in understanding healthcare options, navigating insurance,
+              and locating nearby providers. These challenges are especially prominent in underserved areas,
+              where provider shortages and unreliable internet access can delay treatment and worsen outcomes.
+            </p>
+
+            <div class="callouts grid grid-2">
+              <div class="callout">
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <h3>Limited provider access</h3>
+                  <p class="muted">Long travel distances and shortages of care options.</p>
+                </div>
+              </div>
+
+              <div class="callout">
+                <i data-lucide="book-open"></i>
+                <div>
+                  <h3>Low health literacy</h3>
+                  <p class="muted">Medical terms and care processes can be confusing.</p>
+                </div>
+              </div>
+
+              <div class="callout">
+                <i data-lucide="wallet"></i>
+                <div>
+                  <h3>Insurance & cost barriers</h3>
+                  <p class="muted">Uncertainty around coverage and affordability.</p>
+                </div>
+              </div>
+
+              <div class="callout">
+                <i data-lucide="wifi-off"></i>
+                <div>
+                  <h3>Connectivity constraints</h3>
+                  <p class="muted">Limited broadband reduces access to online resources.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card card-soft">
+            <h3 class="card-title">Challenges</h3>
+            <div class="divider"></div>
+            <ul class="fact-list">
+              <li><span class="dot"></span> Limited access to nearby providers</li>
+              <li><span class="dot"></span> Medical terminology confusion</li>
+              <li><span class="dot"></span> Financial & insurance barriers</li>
+              <li><span class="dot"></span> Poor broadband access in rural regions</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 3) RESEARCH & CONTEXT -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Research & Context</h2>
+          <div class="divider"></div>
+
+          <div class="grid grid-3">
+            <article class="card contextCard">
+              <h3 class="contextTitle"><i data-lucide="users"></i> Social & Cultural Context</h3>
+              <p class="muted">
+                Rural communities can have lower trust in external systems, and some populations have limited
+                technology adoption. Designing for clarity and trust was essential.
+              </p>
+            </article>
+
+            <article class="card contextCard">
+              <h3 class="contextTitle"><i data-lucide="cloud"></i> Physical Constraints</h3>
+              <p class="muted">
+                Poor connectivity and device limitations meant we prioritized lightweight pages, mobile-first UX,
+                and offline fallbacks.
+              </p>
+            </article>
+
+            <article class="card contextCard">
+              <h3 class="contextTitle"><i data-lucide="heart-pulse"></i> Health Literacy Gaps</h3>
+              <p class="muted">
+                Many users struggle to interpret health information. We focused on plain-language definitions,
+                FAQs, and predictable navigation patterns.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4) SOLUTION OVERVIEW -->
+      <section class="section section--tint">
+        <div class="container">
+          <h2 class="section-title">Our Solution</h2>
+          <div class="divider"></div>
+
+          <div class="grid grid-2 featureGrid">
+            <article class="card featureCard">
+              <div class="featureHead">
+                <i data-lucide="map"></i>
+                <h3>Interactive Provider Map</h3>
+              </div>
+              <p class="muted">
+                Search providers by specialty and ZIP code, explore results on a map, and view provider details
+                in expandable cards.
+              </p>
+            </article>
+
+            <article class="card featureCard">
+              <div class="featureHead">
+                <i data-lucide="library"></i>
+                <h3>Health Literacy Tools</h3>
+              </div>
+              <p class="muted">
+                Terminology and FAQs help users understand common healthcare concepts, insurance basics,
+                and what to expect at appointments.
+              </p>
+            </article>
+
+            <article class="card featureCard">
+              <div class="featureHead">
+                <i data-lucide="hard-drive"></i>
+                <h3>Offline Fallback Dataset</h3>
+              </div>
+              <p class="muted">
+                When internet is limited, users can still search a curated local provider dataset by ZIP code.
+              </p>
+            </article>
+
+            <article class="card featureCard">
+              <div class="featureHead">
+                <i data-lucide="smartphone"></i>
+                <h3>Mobile-First, Accessible UI</h3>
+              </div>
+              <p class="muted">
+                Designed for small screens and low-bandwidth environments with clear hierarchy and readable
+                typography.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) DESIGN DECISIONS & TRADEOFFS -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Key Design Decisions</h2>
+          <div class="divider"></div>
+
+          <div class="section-grid-2">
+            <div class="card">
+              <div class="timelineLite" aria-label="Design decisions timeline">
+                <div class="tlItem">
+                  <div class="tlIcon"><i data-lucide="layout"></i></div>
+                  <div class="tlBody">
+                    <h3>Platform Choice: PWA Website</h3>
+                    <p class="muted">
+                      Chose a website-style progressive web app for broad accessibility (no installation) and easier maintenance.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="tlItem">
+                  <div class="tlIcon"><i data-lucide="route"></i></div>
+                  <div class="tlBody">
+                    <h3>Maps: Google Maps API</h3>
+                    <p class="muted">
+                      Selected for geospatial accuracy, documentation quality, and reliable routing/navigation support.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="tlItem">
+                  <div class="tlIcon"><i data-lucide="layers"></i></div>
+                  <div class="tlBody">
+                    <h3>Offline Strategy: Curated Dataset</h3>
+                    <p class="muted">
+                      A full-state dataset was too large for fast loading. We implemented a Central Ohio offline dataset to balance performance and access.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="card card-soft whyCard">
+              <h3 class="card-title">Why it matters</h3>
+              <div class="divider"></div>
+              <p class="muted">
+                These decisions prioritize usability in real-world constraints: limited connectivity, older devices,
+                and users who need simple, trustworthy information quickly.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6) TECHNICAL ARCHITECTURE -->
+      <section class="section section--tint">
+        <div class="container">
+          <h2 class="section-title">Technical Architecture</h2>
+          <div class="divider"></div>
+
+          <div class="section-grid-2">
+            <div class="card">
+              <div class="archBox" aria-label="Architecture diagram">
+                <div class="archRow">
+                  <span class="archNode">Client (Browser / PWA)</span>
+                  <span class="archArrow">→</span>
+                  <span class="archNode">UI + Filtering</span>
+                </div>
+                <div class="archRow">
+                  <span class="archNode">NPPES API (CMS)</span>
+                  <span class="archArrow">→</span>
+                  <span class="archNode">Provider Data</span>
+                </div>
+                <div class="archRow">
+                  <span class="archNode">Google Maps API</span>
+                  <span class="archArrow">→</span>
+                  <span class="archNode">Geolocation + Map</span>
+                </div>
+                <div class="archRow">
+                  <span class="archNode">Local Fallback JSON</span>
+                  <span class="archArrow">→</span>
+                  <span class="archNode">Offline Search</span>
+                </div>
+              </div>
+              <p class="muted" style="margin-top: 14px;">
+                Data is filtered, deduplicated, and limited to keep results readable and performant.
+              </p>
+            </div>
+
+            <aside class="card card-soft">
+              <h3 class="card-title">Tech Stack</h3>
+              <div class="divider"></div>
+              <ul class="fact-list">
+                <li><span class="dot"></span> Frontend: HTML, CSS, JavaScript</li>
+                <li><span class="dot"></span> Data: NPPES API + curated JSON fallback</li>
+                <li><span class="dot"></span> Mapping: Google Maps API</li>
+                <li><span class="dot"></span> Patterns: modular content injection, filtering, dedupe</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7) ENGINEERING HIGHLIGHTS (Accordion) -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Engineering Highlights</h2>
+          <div class="divider"></div>
+
+          <div class="accordion" data-accordion>
+            <button class="accItem" aria-expanded="false">
+              <span class="accTitle">Provider type filtering (taxonomy whitelist)</span>
+              <span class="accIcon" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+            </button>
+            <div class="accPanel" hidden>
+              <p class="muted">
+                The NPPES API returns many entries outside the scope of “providers users would realistically visit.”
+                We filtered results using a curated set of taxonomy codes for relevant specialties.
+              </p>
+            </div>
+
+            <button class="accItem" aria-expanded="false">
+              <span class="accTitle">Deduplication logic (name + proximity)</span>
+              <span class="accIcon" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+            </button>
+            <div class="accPanel" hidden>
+              <p class="muted">
+                To reduce clutter, we merged entries representing the same organization by normalizing names and
+                grouping providers within a small geographic radius.
+              </p>
+            </div>
+
+            <button class="accItem" aria-expanded="false">
+              <span class="accTitle">Performance constraints (radius + result limits)</span>
+              <span class="accIcon" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+            </button>
+            <div class="accPanel" hidden>
+              <p class="muted">
+                Results were limited (e.g., within a reasonable radius and capped count) to keep the UI fast and
+                prevent information overload—especially important in low-bandwidth settings.
+              </p>
+            </div>
+
+            <button class="accItem" aria-expanded="false">
+              <span class="accTitle">Modular content injection (FAQs + terminology)</span>
+              <span class="accIcon" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+            </button>
+            <div class="accPanel" hidden>
+              <p class="muted">
+                FAQ and terminology content is stored in structured data files and injected dynamically, so content
+                updates don’t require editing HTML.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8) IMPACT & OUTCOMES -->
+      <section class="section section--tint">
+        <div class="container">
+          <h2 class="section-title">Impact & Outcomes</h2>
+          <div class="divider"></div>
+
+          <div class="grid grid-4 statsGrid">
+            <div class="card statCard">
+              <div class="statTop"><i data-lucide="filter"></i><span class="statLabel">Clarity</span></div>
+              <div class="statText">Reduced provider search noise</div>
+              <p class="muted">Filtering and grouping makes results understandable at a glance.</p>
+            </div>
+
+            <div class="card statCard">
+              <div class="statTop"><i data-lucide="zap"></i><span class="statLabel">Performance</span></div>
+              <div class="statText">Improved low-bandwidth usability</div>
+              <p class="muted">Lightweight patterns keep the app responsive.</p>
+            </div>
+
+            <div class="card statCard">
+              <div class="statTop"><i data-lucide="navigation"></i><span class="statLabel">Guidance</span></div>
+              <div class="statText">Clear navigation for non-technical users</div>
+              <p class="muted">Simple structure aligned with common healthcare site expectations.</p>
+            </div>
+
+            <div class="card statCard">
+              <div class="statTop"><i data-lucide="accessibility"></i><span class="statLabel">Accessibility</span></div>
+              <div class="statText">Readable UI & predictable interactions</div>
+              <p class="muted">Designed for scanning, comprehension, and mobile-first access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9) SUSTAINABILITY & ETHICS -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Sustainability & Ethics</h2>
+          <div class="divider"></div>
+
+          <div class="grid grid-2">
+            <article class="card">
+              <h3 class="card-title">Environmental Considerations</h3>
+              <div class="divider"></div>
+              <p class="muted">
+                HealthHub was designed to be lightweight and reduce reliance on continuous server calls.
+                Offline support helps reduce infrastructure load while improving access.
+              </p>
+              <ul class="bulletList">
+                <li>Local JSON fallback reduces repeated network requests</li>
+                <li>Designed to run on older devices (lower hardware demands)</li>
+                <li>Open-source viability supports long-term sustainability</li>
+              </ul>
+            </article>
+
+            <article class="card card-soft">
+              <h3 class="card-title">Ethical Design</h3>
+              <div class="divider"></div>
+              <p class="muted">
+                The platform is intended as a free resource—no paywalls and no advertising—focused on empowerment,
+                clarity, and accessibility.
+              </p>
+              <ul class="bulletList">
+                <li>Plain-language content to support varied literacy levels</li>
+                <li>UX choices aimed at trust and predictable navigation</li>
+                <li>Offline-first thinking for digital equity</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10) REFLECTION & FUTURE WORK -->
+      <section class="section section--tint">
+        <div class="container">
+          <h2 class="section-title">Reflection & Future Work</h2>
+          <div class="divider"></div>
+
+          <div class="section-grid-2">
+            <div class="card">
+              <h3 class="card-title">What I’d improve next</h3>
+              <div class="divider"></div>
+              <ul class="bulletList">
+                <li>Expand offline coverage beyond Central Ohio</li>
+                <li>Add multilingual support for broader accessibility</li>
+                <li>Enhance specialty filtering and care navigation guidance</li>
+                <li>Explore partnerships to improve data freshness and outreach</li>
+              </ul>
+            </div>
+
+            <aside class="card card-soft">
+              <h3 class="card-title">Key takeaway</h3>
+              <div class="divider"></div>
+              <p class="muted">
+                Research-informed design + practical implementation tradeoffs led to a solution that stays usable
+                under real-world constraints.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11) FINAL CTA -->
+      <section class="section contact section--tint">
+        <div class="container contact-inner">
+          <h2 class="section-title">Interested in the details?</h2>
+          <div class="divider"></div>
+          <p class="muted">Check out the code, read the full report, or reach out.</p>
+
+          <div class="ctaRow">
+            <a class="btn btn-primary" href="https://github.com/gracemccaffrey/HealthHub" target="_blank" rel="noopener">
+              View Code
+            </a>
+            <a class="btn btn-outline" href="#" id="reportBtnBottom">Read Full Report</a>
+            <a class="btn btn-outline" href="index.html#contact">Contact Me</a>
+          </div>
+
+          <div class="contact-icons">
+            <a class="icon-btn"
+              href="https://www.linkedin.com/in/gracemccaffrey12/"
+              aria-label="LinkedIn"
+              target="_blank" rel="noopener">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a class="icon-btn"
+              href="https://github.com/gracepmccaffrey"
+              aria-label="GitHub"
+              target="_blank" rel="noopener">
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> Grace McCaffrey</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script type="module" src="./js/case-study.js"></script>
+  </body>
+</html>
