@@ -278,6 +278,13 @@ BUTTONS
     color: rgba(42, 42, 58, 0.90);
 }
 
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+}
+
+
 /* -----------------------
 ABOUT FACTS
 ------------------------ */
