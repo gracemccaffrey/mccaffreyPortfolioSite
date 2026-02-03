@@ -1,0 +1,29 @@
+{
+  "resume": {
+    "title": "My Resume",
+    "primaryDownload": "assets/GraceMcCaffreyResume.pdf",
+    "previewImage": "assets/resume-preview.png"
+  },
+  "experience": [
+    {
+      "title": "Math Tutor",
+      "company": "JettPrep",
+      "dates": "Dec 2025  Present",
+      "bullets": [
+        "Provide individualized instruction in Algebra, Precalculus, and Calculus; adapt explanations to diverse learning styles.",
+        "Break down complex problems into clear, structured steps and track progress over time.",
+        "Communicate performance updates to parents and supervisors."
+      ]
+    },
+    {
+      "title": "Front End Web Development Intern",
+      "company": "Bath & Body Works",
+      "dates": "May 2022  Dec 2022",
+      "bullets": [
+        "Maintained and updated production website components supporting high-traffic consumer pages.",
+        "Implemented content and layout updates using HTML, CSS, and JavaScript within an existing design system.",
+        "Identified and resolved UI display issues across browsers and screen sizes; collaborated with designers and QA."
+      ]
+    }
+  ]
+}
