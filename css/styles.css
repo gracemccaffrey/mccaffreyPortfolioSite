@@ -160,6 +160,13 @@ SECTIONS
     .nav-links { gap: 20px; }
     .section-grid-2 { grid-template-columns: 1fr; }
 }
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+  scroll-margin-top: 80px;
+}
 
 /* -----------------------
 CARDS
