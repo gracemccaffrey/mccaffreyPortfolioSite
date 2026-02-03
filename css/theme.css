@@ -1,0 +1,54 @@
+/* -----------------------
+THEME / GLOBALS
+------------------------ */
+:root {
+  /* Typography */
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+
+    /* Colors (slightly pinker lavender) */
+    --bg: #f6f1fb;
+    --surface: rgba(255, 255, 255, 0.80);
+    --surface-2: rgba(186, 152, 221, 0.10);
+
+    --text: #2a2a3a;
+    --muted: #6a6884;
+
+    --primary: #7a70d6;
+    --primary-2: #6a60c8;
+
+    --border: rgba(55, 45, 110, 0.10);
+
+    /* Softer shadows (reduce “raised” look) */
+    --shadow: 0 10px 24px rgba(34, 26, 80, 0.08);
+    --shadow-soft: 0 8px 16px rgba(34, 26, 80, 0.06);
+
+    --radius-lg: 18px;
+    --radius-md: 12px;
+
+    --container: 980px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text);
+
+    /* Soft, pink-leaning lavender wash */
+    background:
+        radial-gradient(1200px 600px at 18% 14%, rgba(210, 140, 196, 0.16), transparent 62%),
+        radial-gradient(1000px 540px at 84% 78%, rgba(138, 122, 214, 0.14), transparent 64%),
+        linear-gradient(180deg, #fbf7ff 0%, var(--bg) 42%, #faf7ff 100%);
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+p { line-height: 1.6; margin: 0 0 12px; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+.container {
+    width: min(var(--container), calc(100% - 48px));
+    margin: 0 auto;
+}

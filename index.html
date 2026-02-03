@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grace McCaffrey | Portfolio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/theme.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+            <!-- NAV -->
+            <header class="site-header">
+                <div class="container nav">
+                    <div class="nav-spacer" aria-hidden="true"></div>
+
+                    <nav class="nav-links" aria-label="Primary Navigation">
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+
+                    <div class="nav-cta">
+                        <a class="btn btn-primary btn-small" href="assets/Resume.pdf" target="_blank" rel="noopener">
+                            Resume
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+        <main id="top">
+            <!-- HERO -->
+            <section class="hero">
+                <div class="container hero-inner">
+                    <h1 class="hero-title">Grace McCaffrey</h1>
+                    <p class="hero-subtitle">Creative web developer with a strong engineering foundation.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#projects">View Projects</a>
+                        <a class="btn btn-outline" href="assets/Resume.pdf" target="_blank" rel="noopener">
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-icons" aria-label="Social Links">
+                        <a class="icon-btn" href="#" aria-label="LinkedIn">
+                            in
+                        </a>
+                        <a class="icon-btn" href="#" aria-label="GitHub">
+                            ⌂
+                        </a>
+                        <a class="icon-btn" href="#" aria-label="Email">
+                            @
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section id="about" class="section">
+                <div class="container section-grid-2">
+                    <div class="card">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="divider"></div>
+                        <p>
+                            I'm a web developer with a background in Electrical and Computer Engineering, 
+                            bringing a strong technical foundation to building modern, user-focused web applications. 
+                            I enjoy working across the full development process — from translating ideas into 
+                            clean interfaces to implementing efficient, scalable solutions behind the scenes.
+                        </p>
+                        <p> 
+                            I'm especially drawn to projects that solve real-world problems and require both 
+                            analytical thinking and creativity. With experience across frontend development, 
+                            data-driven applications, and thoughtful UX design, I'm excited to contribute to 
+                            teams building meaningful, well-crafted digital products.
+                        </p>
+                    </div>
+
+                    <aside class="card card-soft">
+                        <h3 class="card-title">Quick Facts</h3>
+                        <div class="divider"></div>
+
+                        <ul class="fact-list">
+                            <li><span class="dot"></span> Location: Red Bank, NJ</li>
+                            <li><span class="dot"></span> Education: B.S. in ECE</li>
+                            <li><span class="dot"></span> Focus: Frontend & Full Stack</li>
+                            <li><span class="dot"></span> Interests: Tech, Health, Design</li>
+                        </ul>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- PROJECTS (filled in via js)-->
+            <section id="projects" class="section section--tint">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="divider"></div>
+
+                    <div id="featured-project" class="stack-lg"></div>
+                    <div id="project-grid"></div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE & RESUME (JS will fill these) -->
+            <section id="experience" class="section">
+                <div class="container">
+                    <h2 class="section-title">Experience & Resume</h2>
+                    <div class="divider"></div>
+
+                    <div class="section-grid-2">
+                        <div id="experience-timeline" class="card"></div>
+
+                        <div class="card resume-card">
+                            <div id="resume-preview" class="resume-preview">
+                                <div class="resume-placeholder">My Resume</div>
+                            </div>
+                            <div id="resume-download" class="resume-download">
+                                <!-- JS will render a download button here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS (JS will fill these) -->
+            <section id="skills" class="section section--tint">
+                <div class="container">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="divider"></div>
+
+                    <div id="skills-grid" class="grid grid-4"></div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="section section--tint contact">
+                <div class="container contact-inner">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="divider"></div>
+
+                    <p class="muted">Let's build something amazing together!</p>
+
+                    <a class="btn btn-primary" href="mailto:gracepmccaffrey@gmail.com">Email Me</a>
+
+                    <div class="contact-icons">
+                        <a class="icon-btn" href="#" aria-label="LinkedIn">in</a>
+                        <a class="icon-btn" href="#" aria-label="GitHub">⌂</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+            <footer class="site-footer">
+                <div class="container footer-inner">
+                    <p class="muted">© <span id="year"></span> Grace McCaffrey</p>
+                </div>
+            </footer>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

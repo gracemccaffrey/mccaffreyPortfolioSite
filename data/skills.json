@@ -1,0 +1,8 @@
+{
+"categories": [
+    { "name": "Frontend", "items": ["HTML", "CSS", "JavaScript", "React"] },
+    { "name": "Backend", "items": ["Node.js", "Express", "MongoDB"] },
+    { "name": "Tools", "items": ["Git", "Docker", "Figma"] },
+    { "name": "Other", "items": ["REST APIs", "Python", "SQL"] }
+]
+}

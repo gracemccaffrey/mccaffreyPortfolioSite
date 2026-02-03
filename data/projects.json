@@ -1,0 +1,91 @@
+{
+"featuredId": "healthhub",
+"projects": [
+    {
+        "id": "healthhub",
+        "title": "HealthHub",
+        "subtitle": "Healthcare provider discovery and medical literacy web application",
+        "tech": ["HTML", "CSS", "JavaScript", "External APIs", "Interactive Mapping"],
+        "image": "assets/HHCover.png",
+        "links": {
+            "liveDemo": "#",
+            "github": "#",
+            "caseStudy": "case-study.html?id=healthhub"
+        },
+        "expanded": {
+            "description": "HealthHub is a healthcare-focused web application designed to improve access to medical providers and health information by presenting complex data through a clean, intuitive interface. The platform allows users to search for providers by specialty, explore results on an interactive map, and better understand healthcare options through clear, accessible content.",
+            "roleTitle": "My Role",
+            "role": "HealthHub was developed as a team project with 13 contributors. I led and owned the majority of the application’s development, including site design, frontend implementation, API integration, client-side filtering logic, and completion of the interactive map feature. I was responsible for translating project requirements into a cohesive, functional prototype.",
+            "highlightsTitle": "Technical Highlights",
+            "highlights": [
+                "Integrated external healthcare APIs to retrieve and process provider data",
+                "Implemented client-side filtering logic to efficiently handle large datasets",
+                "Designed and completed an interactive provider map with expandable result cards",
+                "Focused on clarity, accessibility, and usability for diverse user populations",
+                "Structured frontend code for maintainability and future expansion"
+            ],
+            "outcomeTitle": "Outcome",
+            "outcome": "HealthHub was delivered as a fully functional prototype for a humanitarian engineering course. The project demonstrates my ability to take ownership of a complex web application, handle real-world data, and balance technical problem-solving with thoughtful user experience design."
+        }
+    },
+    {
+        "id": "bbw",
+        "title": "Enterprise Frontend Development",
+        "subtitle": "Bath & Body Works",
+        "tech": ["HTML", "CSS", "JavaScript", "Salesforce Content", "Agile"],
+        "image": "assets/BBWcover.png",
+        "links": {
+            "github": "#"
+        },
+        "expanded": {
+            "description": "As a Front-End Web Development Intern at Bath & Body Works, I worked on consumer-facing, production web pages supporting a high-traffic e-commerce platform. This experience exposed me to enterprise-scale frontend development, structured content workflows, and accessibility-conscious UI updates in a real production environment.",
+            "highlights": [
+                "Implemented accessibility and usability improvements across production pages",
+                "Modified existing components within established design and content systems",
+                "Worked with Salesforce-integrated content and structured data",
+                "Identified and resolved UI issues affecting responsiveness and consistency",
+                "Contributed code that was deployed to live production environments"
+            ]
+        }
+    },
+    {
+        "id": "unix-shell",
+        "title": "Unix Shell with Signal Handling",
+        "subtitle": "Systems programming project",
+        "tech": ["C", "Unix", "Signals", "Processes"],
+        "image": "assets/ShellCover.jpg",
+        "links": {
+            "github": "#"
+        },
+        "expanded": {
+            "description": "This project involved developing a Unix shell in C that supports command execution, signal handling, and command history management. The shell was designed to closely reflect real operating system behavior, strengthening my understanding of low-level system interactions.",
+            "highlights": [
+                "Command parsing and execution",
+                "Process creation and management",
+                "SIGINT signal handling",
+                "Command history tracking and re-execution"
+            ]
+        }
+    },
+    {
+        "id": "db-rental",
+        "title": "Database Design & Backend Integration",
+        "subtitle": "Equipment Rental Management System",
+        "tech": ["MySQL", "SQL", "Schema Design", "Indexing"],
+        "image": "assets/DBCover.png",
+        "links": {
+            "github": "#"
+        },
+        "expanded": {
+            "description": "This project involved designing and implementing a relational database and backend integration for an equipment rental company serving a specialized community, with equipment delivery handled via drones. The system was built to support structured data storage, efficient querying, and backend API usage.",
+            "highlights": [
+                "Designed normalized relational schema using MySQL",
+                "Implemented primary and foreign key relationships",
+                "Created indexes to improve query performance",
+                "Wrote complex SQL queries using joins, aggregations, and constraints",
+                "Supported backend API integration"
+            ]
+        }
+    }
+]
+}
