@@ -8,7 +8,7 @@
         "tech": ["HTML", "CSS", "JavaScript", "External APIs", "Interactive Mapping"],
         "image": "assets/HHCover.png",
         "links": {
-            "liveDemo": "#",
+            "liveDemo": "https://gracemccaffrey.github.io/HealthHub/",
             "github": "https://github.com/gracemccaffrey/HealthHub",
             "caseStudy": "case-study.html?id=healthhub"
         },
