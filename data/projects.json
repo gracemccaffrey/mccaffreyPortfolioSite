@@ -9,7 +9,7 @@
         "image": "assets/HHCover.png",
         "links": {
             "liveDemo": "#",
-            "github": "#",
+            "github": "https://github.com/gracemccaffrey/HealthHub",
             "caseStudy": "case-study.html?id=healthhub"
         },
         "expanded": {

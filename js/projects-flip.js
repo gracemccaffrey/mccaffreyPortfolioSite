@@ -87,7 +87,9 @@ function createFlipCard(project, isFeatured = false) {
       (isFeatured && highlights.length)
         ? el("ul", { class: "flipList" }, highlights.map((h) => el("li", {}, [h])))
           : null,
-      el("div", { class: "flipBackBtns" }, buildButtons(project.links)),
+      isFeatured
+        ? el("div", { class: "flipBackBtns" }, buildButtons(project.links))
+          : null,
       el("div", { class: "flipHint flipHint--back" }, ["← Click to close"]),
     ]),
   ]);
