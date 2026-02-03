@@ -167,6 +167,10 @@ SECTIONS
 #contact {
   scroll-margin-top: 80px;
 }
+/* Remove the glow that overhangs the bottom of the page */
+#contact.section::after {
+  content: none; /* or display: none; */
+}
 
 /* -----------------------
 CARDS

@@ -386,3 +386,7 @@ Keeps the same visual language as theme.css.
 /* Contact icons alignment */
 .contact-inner { text-align: center; position: relative; z-index: 1; }
 .contact-icons { display: flex; justify-content: center; gap: 14px; margin-top: 14px; }
+
+.section.contact::after {
+  content: none;
+}
