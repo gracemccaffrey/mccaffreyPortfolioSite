@@ -352,3 +352,189 @@ CONTACT + FOOTER
     display: flex;
     justify-content: center;
 }
+
+
+/* -----------------------
+PROJECT FLIP CARDS (3D)
+------------------------ */
+
+.projectsFlipGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.flipCardContainer {
+  position: relative;
+  height: 360px;
+  perspective: 1100px;
+}
+
+.flipCardContainer--featured {
+  height: 360px;
+}
+
+/* Make featured card span full width and look like mock */
+#featured-project .flipCardContainer--featured {
+  height: 360px;
+}
+
+.flipCard {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 28px;
+  outline: none;
+}
+
+.flipCard:focus-visible {
+  box-shadow: 0 0 0 4px rgba(122, 112, 214, 0.25), 0 10px 24px rgba(34, 26, 80, 0.08);
+}
+
+.flipCard:hover {
+  transform: translateY(-2px);
+}
+
+.flipCard.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flipSide {
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(55, 45, 110, 0.10);
+  box-shadow: 0 8px 18px rgba(34, 26, 80, 0.05);
+  overflow: hidden;
+}
+
+.flipFront {
+  display: grid;
+  grid-template-rows: 180px 1fr;
+}
+
+.flipCardContainer--featured .flipFront {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1.25fr 0.75fr;
+}
+
+.flipImg {
+  background: rgba(186, 152, 221, 0.12);
+  background-position: center;
+  background-size: cover;
+}
+
+.flipImg--featured {
+  height: 100%;
+}
+
+.flipCardContainer--featured .flipImg--featured {
+  border-left: 1px solid rgba(55, 45, 110, 0.10);
+}
+
+.flipInfo {
+  padding: 18px 18px 18px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.flipTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+.flipSubtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.flipTech {
+  margin: 0;
+  color: rgba(42, 42, 58, 0.72);
+  font-size: 13px;
+}
+
+.flipHint {
+  margin-top: auto;
+  font-size: 12px;
+  color: rgba(42, 42, 58, 0.55);
+}
+
+.flipFrontBtns {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flipBack {
+  transform: rotateY(180deg);
+  display: grid;
+}
+
+.flipBackTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+
+.flipStars {
+  display: inline-flex;
+  gap: 4px;
+  color: #f2c94c;
+  font-size: 14px;
+}
+
+.flipDesc {
+  margin: 0;
+  color: rgba(42, 42, 58, 0.72);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.flipList {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+  color: rgba(42, 42, 58, 0.72);
+  font-size: 14px;
+  display: grid;
+  gap: 6px;
+}
+
+.flipBackBtns {
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flipBtn.btn-small {
+  font-size: 14px;
+  padding: 10px 14px;
+}
+
+/* Responsive: make featured card stack on narrow screens */
+@media (max-width: 820px) {
+  .flipCardContainer--featured {
+    height: 360px;
+  }
+
+  .flipCardContainer--featured .flipFront {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 1fr;
+  }
+
+  .flipCardContainer--featured .flipImg--featured {
+    border-left: none;
+    border-bottom: 1px solid rgba(55, 45, 110, 0.10);
+  }
+}
