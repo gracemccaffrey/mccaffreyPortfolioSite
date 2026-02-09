@@ -4,6 +4,9 @@
 // - Wire buttons for demo/report URLs
 // - Simple accordion behavior
 // - (Optional) read ?id=healthhub for future scalability
+import { initMobileNav } from "./nav.js";
+
+initMobileNav();
 
 const DEMO_URL = "#";   // TODO: replace with your real demo URL
 const REPORT_URL = "./assets/HHFinalReport.docx"; // TODO: replace with your PDF path, e.g. "assets/HealthHubFinalReport.pdf"

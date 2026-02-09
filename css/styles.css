@@ -1,45 +1,5 @@
 
-/* -----------------------
-NAV
------------------------- */
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(55, 45, 110, 0.10);
-}
-
-.nav {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 18px 0;
-}
-
-/* keep a left spacer so the center nav stays centered */
-.nav-spacer {
-    height: 1px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 44px;
-    justify-content: center;
-    font-size: 14px;
-    color: var(--muted);
-}
-
-.nav-links a:hover {
-    color: var(--text);
-}
-
-.nav-cta {
-    display: flex;
-    justify-content: flex-end;
-}
 
 /* -----------------------
 HERO
@@ -541,14 +501,6 @@ PROJECT FLIP CARDS (3D)
   perspective: 1100px;
 }
 
-.flipCardContainer--featured {
-  height: 360px;
-}
-
-/* Make featured card span full width and look like mock */
-#featured-project .flipCardContainer--featured {
-  height: 360px;
-}
 
 .flipCard {
   width: 100%;
@@ -695,10 +647,6 @@ PROJECT FLIP CARDS (3D)
 
 /* Responsive: make featured card stack on narrow screens */
 @media (max-width: 820px) {
-  .flipCardContainer--featured {
-    height: 360px;
-  }
-
   .flipCardContainer--featured .flipFront {
     grid-template-columns: 1fr;
     grid-template-rows: 180px 1fr;
@@ -709,6 +657,55 @@ PROJECT FLIP CARDS (3D)
     border-bottom: 1px solid rgba(55, 45, 110, 0.10);
   }
 }
+
+/* -----------------------
+PROJECTS: MOBILE FRIENDLY FLIP -> EXPAND
+On small screens, let cards grow naturally so text never clips.
+------------------------ */
+@media (max-width: 600px) {
+  /* Let the container be as tall as the FRONT content */
+  .flipCardContainer,
+  .flipCardContainer--featured {
+    height: auto;
+  }
+
+  .flipCard {
+    height: 100%;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  /* Keep the 3D faces absolute so the flip works */
+  .flipSide {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+  }
+
+  /* Front/back still flip */
+  .flipBack {
+    transform: rotateY(180deg);
+    overflow-y: auto;                 /* ✅ allow scrolling */
+    -webkit-overflow-scrolling: touch; /* smoother iOS scrolling */
+    padding-bottom: 14px;
+  }
+
+  .flipFront {
+    overflow: visible;
+  }
+
+  /* Featured card: keep your single-column front layout on mobile */
+  .flipCardContainer--featured .flipFront {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 180px 1fr !important;
+  }
+
+  .flipHint {
+    margin-top: 12px;
+  }
+}
+
+
 
 /* -----------------------
 SKILLS

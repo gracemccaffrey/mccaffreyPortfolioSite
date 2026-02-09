@@ -1,191 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grace McCaffrey | Portfolio</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grace McCaffrey | Portfolio</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
-            rel="stylesheet"
-        />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="css/theme.css" />
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <body>
-            <!-- NAV -->
-            <header class="site-header">
-                <div class="container nav">
-                    <div class="nav-spacer" aria-hidden="true"></div>
+<body>
+    <!-- NAV -->
+    <header class="site-header">
+        <div class="container nav">
+            <button
+                class="icon-btn nav-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobileNav"
+                >
+                <i data-lucide="menu"></i>
+            </button>
 
-                    <nav class="nav-links" aria-label="Primary Navigation">
-                        <a href="#about">About</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#experience">Experience</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a class="btn btn-primary btn-small" href="assets/GraceMcCaffreyResume.pdf" target="_blank" rel="noopener">
+                Resume
+                </a>
+            </div>
+        </div>
 
-                    <div class="nav-cta">
-                        <a class="btn btn-primary btn-small" href="assets/GraceMcCaffreyResume.pdf" target="_blank" rel="noopener">
-                            Resume
-                        </a>
-                    </div>
+    <!-- Mobile menu panel -->
+        <div id="mobileNav" class="mobileNav" hidden>
+            <div class="mobileNav-inner">
+                <div class="mobileNav-head">
+                    <span class="mobileNav-title">Menu</span>
+                    <button class="icon-btn mobileNav-close" type="button" aria-label="Close menu">
+                        <i data-lucide="x"></i>
+                    </button>
                 </div>
-            </header>
 
-        <main id="top">
-            <!-- HERO -->
-            <section class="hero">
-                <div class="container hero-inner">
-                    <h1 class="hero-title">Grace McCaffrey</h1>
-                    <p class="hero-subtitle">Creative web developer with a strong engineering foundation.</p>
-
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#projects">View Projects</a>
-                        <a class="btn btn-outline" href="assets/GraceMcCaffreyResume.pdf" target="_blank" rel="noopener">
-                            Download Resume
-                        </a>
-                    </div>
-
-                    <div class="hero-icons" aria-label="Social Links">
-                        <a class="icon-btn"
-                            href="https://www.linkedin.com/in/gracemccaffrey12/"
-                            aria-label="LinkedIn"
-                            target="_blank" rel="noopener">
-                            <i data-lucide="linkedin"></i>
-                        </a>
-                        <a class="icon-btn"
-                            href="https://github.com/gracepmccaffrey"
-                            aria-label="GitHub"
-                            target="_blank" rel="noopener">
-                            <i data-lucide="github"></i>
-                        </a>
-                        <a class="icon-btn"
-                            href="mailto:gracepmccaffrey@gmail.com"
-                            aria-label="Email">
-                            <i data-lucide="mail"></i>
-                        </a>
-                    </div>
+                <div class="mobileNav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
                 </div>
-            </section>
 
-            <!-- ABOUT -->
-            <section id="about" class="section">
-                <div class="container section-grid-2">
-                    <div class="card">
-                        <h2 class="section-title">About Me</h2>
-                        <div class="divider"></div>
-                        <p>
-                            I'm a web developer with a background in Electrical and Computer Engineering, 
-                            bringing a strong technical foundation to building modern, user-focused web applications. 
-                            I enjoy working across the full development process — from translating ideas into 
-                            clean interfaces to implementing efficient, scalable solutions behind the scenes.
-                        </p>
-                        <p> 
-                            I'm especially drawn to projects that solve real-world problems and require both 
-                            analytical thinking and creativity. With experience across frontend development, 
-                            data-driven applications, and thoughtful UX design, I'm excited to contribute to 
-                            teams building meaningful, well-crafted digital products.
-                        </p>
-                    </div>
-
-                    <aside class="card card-soft">
-                        <h3 class="card-title">Quick Facts</h3>
-                        <div class="divider"></div>
-
-                        <ul class="fact-list">
-                            <li><span class="dot"></span> Location: Red Bank, NJ</li>
-                            <li><span class="dot"></span> Education: B.S. in ECE</li>
-                            <li><span class="dot"></span> Focus: Frontend & Full Stack</li>
-                            <li><span class="dot"></span> Interests: Tech, Health, Design</li>
-                        </ul>
-                    </aside>
+                <div class="mobileNav-actions">
+                    <a class="btn btn-primary" href="assets/GraceMcCaffreyResume.pdf" target="_blank" rel="noopener">Resume</a>
+                    <a class="btn btn-outline" href="mailto:gracepmccaffrey@gmail.com">Email</a>
                 </div>
-            </section>
+            </div>
+        </div>
+    </header>
 
-            <!-- PROJECTS (filled in via js)-->
-            <section id="projects" class="section section--tint">
-                <div class="container">
-                    <h2 class="section-title">Projects</h2>
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <h1 class="hero-title">Grace McCaffrey</h1>
+                <p class="hero-subtitle">Creative web developer with a strong engineering foundation.</p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View Projects</a>
+                    <a class="btn btn-outline" href="assets/GraceMcCaffreyResume.pdf" target="_blank" rel="noopener">
+                        Download Resume
+                    </a>
+                </div>
+
+                <div class="hero-icons" aria-label="Social Links">
+                    <a class="icon-btn"
+                        href="https://www.linkedin.com/in/gracemccaffrey12/"
+                        aria-label="LinkedIn"
+                        target="_blank" rel="noopener">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a class="icon-btn"
+                        href="https://github.com/gracepmccaffrey"
+                        aria-label="GitHub"
+                        target="_blank" rel="noopener">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a class="icon-btn"
+                        href="mailto:gracepmccaffrey@gmail.com"
+                        aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="container section-grid-2">
+                <div class="card">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="divider"></div>
+                    <p>
+                        I'm a web developer with a background in Electrical and Computer Engineering, 
+                        bringing a strong technical foundation to building modern, user-focused web applications. 
+                        I enjoy working across the full development process — from translating ideas into 
+                        clean interfaces to implementing efficient, scalable solutions behind the scenes.
+                    </p>
+                    <p> 
+                        I'm especially drawn to projects that solve real-world problems and require both 
+                        analytical thinking and creativity. With experience across frontend development, 
+                        data-driven applications, and thoughtful UX design, I'm excited to contribute to 
+                        teams building meaningful, well-crafted digital products.
+                    </p>
+                </div>
+
+                <aside class="card card-soft">
+                    <h3 class="card-title">Quick Facts</h3>
                     <div class="divider"></div>
 
-                    <div id="featured-project" class="stack-lg"></div>
-                    <div id="project-grid"></div>
-                </div>
-            </section>
+                    <ul class="fact-list">
+                        <li><span class="dot"></span> Location: Red Bank, NJ</li>
+                        <li><span class="dot"></span> Education: B.S. in ECE</li>
+                        <li><span class="dot"></span> Focus: Frontend & Full Stack</li>
+                        <li><span class="dot"></span> Interests: Tech, Health, Design</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
 
-            <!-- EXPERIENCE & RESUME (JS will fill these) -->
-            <section id="experience" class="section">
-                <div class="container">
-                    <h2 class="section-title">Experience & Resume</h2>
-                    <div class="divider"></div>
+        <!-- PROJECTS (filled in via js)-->
+        <section id="projects" class="section section--tint">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="divider"></div>
 
-                    <div class="section-grid-2">
-                        <div id="experience-timeline" class="experience-timeline"></div>
+                <div id="featured-project" class="stack-lg"></div>
+                <div id="project-grid"></div>
+            </div>
+        </section>
 
-                        <div class="card resume-card">
-                            <div id="resume-preview" class="resume-preview">
-                                <div class="resume-placeholder">My Resume</div>
-                            </div>
-                            <div id="resume-download" class="resume-download">
-                                <!-- JS will render a download button here -->
-                            </div>
+        <!-- EXPERIENCE & RESUME (JS will fill these) -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience & Resume</h2>
+                <div class="divider"></div>
+
+                <div class="section-grid-2">
+                    <div id="experience-timeline" class="experience-timeline"></div>
+
+                    <div class="card resume-card">
+                        <div id="resume-preview" class="resume-preview">
+                            <div class="resume-placeholder">My Resume</div>
+                        </div>
+                        <div id="resume-download" class="resume-download">
+                            <!-- JS will render a download button here -->
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- SKILLS (JS will fill these) -->
-            <section id="skills" class="section section--tint">
-                <div class="container">
-                    <h2 class="section-title">Skills</h2>
-                    <div class="divider"></div>
+        <!-- SKILLS (JS will fill these) -->
+        <section id="skills" class="section section--tint">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="divider"></div>
 
-                    <div id="skills-grid" class="grid grid-4"></div>
+                <div id="skills-grid" class="grid grid-4"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section--tint contact">
+            <div class="container contact-inner">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="divider"></div>
+
+                <p class="muted">Let's build something amazing together!</p>
+
+                <a class="btn btn-primary" href="mailto:gracepmccaffrey@gmail.com">Email Me</a>
+
+                <div class="contact-icons">
+                    <a class="icon-btn"
+                        href="https://www.linkedin.com/in/gracemccaffrey12/"
+                        aria-label="LinkedIn"
+                        target="_blank" rel="noopener">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a class="icon-btn"
+                        href="https://github.com/gracepmccaffrey"
+                        aria-label="GitHub"
+                        target="_blank" rel="noopener">
+                        <i data-lucide="github"></i>
+                    </a>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <!-- CONTACT -->
-            <section id="contact" class="section section--tint contact">
-                <div class="container contact-inner">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="divider"></div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="muted">© <span id="year"></span> Grace McCaffrey</p>
+        </div>
+    </footer>
 
-                    <p class="muted">Let's build something amazing together!</p>
-
-                    <a class="btn btn-primary" href="mailto:gracepmccaffrey@gmail.com">Email Me</a>
-
-                    <div class="contact-icons">
-                        <a class="icon-btn"
-                            href="https://www.linkedin.com/in/gracemccaffrey12/"
-                            aria-label="LinkedIn"
-                            target="_blank" rel="noopener">
-                            <i data-lucide="linkedin"></i>
-                        </a>
-                        <a class="icon-btn"
-                            href="https://github.com/gracepmccaffrey"
-                            aria-label="GitHub"
-                            target="_blank" rel="noopener">
-                            <i data-lucide="github"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-            <footer class="site-footer">
-                <div class="container footer-inner">
-                    <p class="muted">© <span id="year"></span> Grace McCaffrey</p>
-                </div>
-            </footer>
-
-        <script src="https://unpkg.com/lucide@latest"></script>
-        <script> lucide.createIcons(); </script>
-        <script type="module" src="./js/main.js"></script>
-    </body>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script> lucide.createIcons(); </script>
+    <script type="module" src="./js/main.js"></script>
+</body>
 </html>

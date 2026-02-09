@@ -31,11 +31,18 @@ function buildButtons(links = {}) {
   ];
   for (const [label, href] of map) {
     if (!href) continue;
+    
+    const isExternal = 
+      href.startsWith("http://") ||
+      href.startsWith("https://");
+
     const a = el("a", {
       class: "btn btn-outline btn-small flipBtn",
       href,
-      target: href.startsWith("#") ? "" : "_blank",
-      rel: href.startsWith("#") ? "" : "noopener",
+      ...(isExternal && {
+          target: "_blank",
+          rel: "noopener",
+      }),
     }, [label]);
     // Don't flip when clicking links
     a.addEventListener("click", (e) => e.stopPropagation());
@@ -121,6 +128,13 @@ async function loadProjectsJson(url = "./projects.json") {
 }
 
 function equalizeMiniCardHeights(gridMountId = "project-grid") {
+  // ✅ On mobile, don't equalize; let cards size naturally
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    const grid = document.getElementById(gridMountId);
+    grid?.querySelectorAll(".flipCardContainer").forEach((c) => (c.style.height = ""));
+    return;
+  }
+  
   const grid = document.getElementById(gridMountId);
   if (!grid) return;
 
@@ -155,6 +169,35 @@ function equalizeMiniCardHeights(gridMountId = "project-grid") {
     c.style.height = `${finalHeight}px`;
   });
 }
+// for mobile, change size of card to fit the front 
+function sizeCardsToFront(featuredMountId = "featured-project", gridMountId = "project-grid") {
+  const mounts = [
+    document.getElementById(featuredMountId),
+    document.getElementById(gridMountId),
+  ].filter(Boolean);
+
+  mounts.forEach((mount) => {
+    mount.querySelectorAll(".flipCardContainer").forEach((container) => {
+      const card = container.querySelector(".flipCard");
+      const front = card?.querySelector(".flipFront");
+      const img = front?.querySelector(".flipImg");
+      const info = front?.querySelector(".flipInfo");
+      if (!img || !info) return;
+
+      // ✅ Reliable: image block + text block
+      const required = img.offsetHeight + info.scrollHeight;
+
+      // buffer for borders + the hint baseline
+      const buffer = 0;
+
+      container.style.height = `${Math.ceil(required + buffer)}px`;
+      
+      console.log("Set height:", container.style.height, container.className);
+    });
+  });
+}
+
+
 
 export async function initProjectsFlip(options = {}) {
   const {
@@ -189,12 +232,23 @@ export async function initProjectsFlip(options = {}) {
     gridMount.appendChild(createFlipCard(p, false));
   }
 
-  // After rendering, equalize mini card heights so front text never clips
-  equalizeMiniCardHeights(gridMountId);
+  // After rendering, equalize mini card heights so front text never clips or adjust the front for mobile
+  const isMobile = window.matchMedia("(max-width: 800px)").matches;
+  if (isMobile) sizeCardsToFront(featuredMountId, gridMountId);
+  else equalizeMiniCardHeights(gridMountId);
+
 
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => equalizeMiniCardHeights(gridMountId), 100);
+    resizeTimer = setTimeout(() => {
+      const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+      if (isMobile) {
+        sizeCardsToFront(featuredMountId, gridMountId);
+      } else {
+        equalizeMiniCardHeights(gridMountId);
+      }
+    }, 100);
   });
 }

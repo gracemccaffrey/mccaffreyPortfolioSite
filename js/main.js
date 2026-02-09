@@ -1,9 +1,12 @@
 // js/main.js
+import { initMobileNav } from "./nav.js";
 import { initProjectsFlip } from "./projects-flip.js";
 import { initResumeSection } from "./resume.js";
 import { initSkillsSection } from "./skills.js";
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+initMobileNav();
 
 initProjectsFlip({ jsonUrl: "./data/projects.json" }).catch((err) => {
   console.error("Projects failed to load:", err);
