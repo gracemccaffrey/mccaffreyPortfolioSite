@@ -3,10 +3,11 @@
     {
       "category": "Frontend",
       "items": [
-        "HTML",
-        "CSS",
+        "HTML (Semantic)",
+        "CSS (Responsive Design)",
         "JavaScript",
-        "React"
+        "React", 
+        "Accessibility-Aware Design"
       ]
     },
     {
@@ -14,23 +15,26 @@
       "items": [
         "Node.js",
         "Express",
+        "SQL Databases",
         "MongoDB"
       ]
     },
     {
       "category": "Tools",
       "items": [
-        "Git",
-        "Docker",
-        "Figma"
+        "Git / GitHub",
+        "Docker (Basic)",
+        "Figma", 
+        "Agile / Scrum"
       ]
     },
     {
-      "category": "Other",
+      "category": "Foundations",
       "items": [
         "REST APIs",
         "Python",
-        "SQL"
+        "C", 
+        "Linux / Unix"
       ]
     }
   ]
