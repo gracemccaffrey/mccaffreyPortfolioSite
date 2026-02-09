@@ -53,6 +53,18 @@ ul { margin: 0; padding: 0; list-style: none; }
     margin: 0 auto;
 }
 
+/* Fix Overflow width issue */ 
+/* styles.css (and/or case-study.css) */
+.hero,
+.section {
+    overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+    .hero,
+    .section { overflow-x: hidden; }
+}
+
 /* -----------------------
 NAV
 ------------------------ */
