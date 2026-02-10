@@ -24,6 +24,16 @@
         "Implemented content and layout updates using HTML, CSS, and JavaScript within an existing design system.",
         "Identified and resolved UI display issues across browsers and screen sizes; collaborated with designers and QA."
       ]
+    }, 
+    {
+      "title": "Camp Counselor",
+      "company": "Pine Grove Day Camp",
+      "dates": "Summer 2025",
+      "bullets": [
+        "Led and supervised a group of 15 campers in a fast-paced, team-based environment, ensuring safety, engagement, and inclusion.",
+        "Planned and adapted daily activities to accommodate different personalities, energy levels, and accessibility needs.",
+        "Resolved interpersonal conflicts and communicated effectively with staff and parents to support positive experiences."
+      ]
     }
   ]
 }
