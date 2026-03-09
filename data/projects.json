@@ -5,7 +5,7 @@
         "id": "healthhub",
         "title": "HealthHub",
         "subtitle": "Healthcare provider discovery and medical literacy web application",
-        "tech": ["HTML", "CSS", "JavaScript", "External APIs", "Interactive Mapping"],
+        "tech": ["HTML/CSS/JavaScript", "REST APIs", "Interactive Mapping", "Accessibility-First Design"],
         "image": "assets/HHCover.png",
         "links": {
             "liveDemo": "https://gracemccaffrey.github.io/HealthHub/",
@@ -13,16 +13,15 @@
             "caseStudy": "case-study.html?id=healthhub"
         },
         "expanded": {
-            "description": "HealthHub is a healthcare-focused web application designed to improve access to medical providers and health information by presenting complex data through a clean, intuitive interface. The platform allows users to search for providers by specialty, explore results on an interactive map, and better understand healthcare options through clear, accessible content.",
+            "description": "HealthHub is a Progressive Web App built to improve healthcare access for rural and underserved communities. I led all development and UX design within a four-person team, building a platform that lets users search for nearby providers by specialty and ZIP code, explore results on an interactive map, and access clear health literacy content. See the case study for full technical detail.",
             "roleTitle": "My Role",
             "role": "HealthHub was developed as a team project with 13 contributors. I led and owned the majority of the application’s development, including site design, frontend implementation, API integration, client-side filtering logic, and completion of the interactive map feature. I was responsible for translating project requirements into a cohesive, functional prototype.",
             "highlightsTitle": "Technical Highlights",
             "highlights": [
-                "Integrated external healthcare APIs to retrieve and process provider data",
-                "Implemented client-side filtering logic to efficiently handle large datasets",
-                "Designed and completed an interactive provider map with expandable result cards",
-                "Focused on clarity, accessibility, and usability for diverse user populations",
-                "Structured frontend code for maintainability and future expansion"
+                "Pivoted data source mid-development from Google Places API to NPPES/CMS APIs for richer, more structured provider data",
+                "Built provider filtering and deduplication logic to surface clean, relevant results from a large government dataset",
+                "Implemented offline fallback functionality using a locally cached JSON dataset for low-connectivity environments",
+                "Led all UX design independently, scoring 29/30 on the team's design evaluation rubric"
             ],
             "outcomeTitle": "Outcome",
             "outcome": "HealthHub was delivered as a fully functional prototype for a humanitarian engineering course. The project demonstrates my ability to take ownership of a complex web application, handle real-world data, and balance technical problem-solving with thoughtful user experience design."
@@ -38,7 +37,7 @@
             "github": "#"
         },
         "expanded": {
-            "description": "As a Front-End Web Development Intern at Bath & Body Works, I worked on consumer-facing, production web pages supporting a high-traffic e-commerce platform. This experience exposed me to enterprise-scale frontend development, structured content workflows, and accessibility-conscious UI updates in a real production environment.",
+            "description": "Shipped two production Jira tickets to bathandbodyworks.com, refactoring homepage modules from carousel layouts to overflow scroll and resolving a cross-browser scrolling bug where Mac trackpad gestures triggered unintended browser navigation. Worked within Salesforce Commerce Cloud and an established modular design system, collaborating with UX designers and QA through full sprint and testing cycles.",
             "highlights": [
                 "Implemented accessibility and usability improvements across production pages",
                 "Modified existing components within established design and content systems",

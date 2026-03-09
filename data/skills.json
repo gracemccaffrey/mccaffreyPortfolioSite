@@ -11,30 +11,28 @@
       ]
     },
     {
-      "category": "Backend",
+      "category": "Backend & Data",
       "items": [
-        "Node.js",
-        "Express",
-        "SQL Databases",
-        "MongoDB"
+        "REST APIs",
+        "MySQL",
+        "JSON Data Architecture"
       ]
     },
     {
       "category": "Tools",
       "items": [
         "Git / GitHub",
-        "Docker (Basic)",
         "Figma", 
         "Agile / Scrum"
       ]
     },
     {
-      "category": "Foundations",
+      "category": "Systems & Languages",
       "items": [
-        "REST APIs",
         "Python",
         "C", 
-        "Linux / Unix"
+        "Linux / Unix", 
+        "Java"
       ]
     }
   ]

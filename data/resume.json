@@ -20,9 +20,12 @@
       "company": "Bath & Body Works",
       "dates": "May 2022  Dec 2022",
       "bullets": [
-        "Maintained and updated production website components supporting high-traffic consumer pages.",
-        "Implemented content and layout updates using HTML, CSS, and JavaScript within an existing design system.",
-        "Identified and resolved UI display issues across browsers and screen sizes; collaborated with designers and QA."
+        "Shipped two production Jira tickets to bathandbodyworks.com as part of an Agile team, participating in sprint planning, standups, estimation, and reviews",
+        "Refactored homepage modules from carousel layouts to overflow scroll using HTML, CSS (flexbox), and JavaScript within an established modular design system",
+        "Resolved a cross-browser UX bug where Mac trackpad gestures triggered unintended browser navigation, using a mousewheel event listener to clamp scroll behavior", 
+        "Implemented scroll interaction analytics tracking via window._satellite.track to capture engagement data for cross-team reporting", 
+        "Referenced Figma design files throughout development and collaborated with the UX/FEWD team through design system workshops and component reviews",
+        "Partnered with QA through UAT and regression testing cycles before each release, working within Salesforce Commerce Cloud"
       ]
     }, 
     {
