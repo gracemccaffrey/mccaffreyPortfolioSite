@@ -104,14 +104,14 @@
                 <div class="factsGrid" aria-label="Quick project facts">
                   <div class="factPill"><span class="k">Role</span><span class="v">Front-End / Full-Stack Developer</span></div>
                   <div class="factPill"><span class="k">Timeline</span><span class="v">Jan – Apr 2025</span></div>
-                  <div class="factPill"><span class="k">Team</span><span class="v">Team of 5</span></div>
+                  <div class="factPill"><span class="k">Team</span><span class="v">4 Developers (13-person cohort)</span></div>
                   <div class="factPill"><span class="k">Platform</span><span class="v">Progressive Web App</span></div>
                   <div class="factPill"><span class="k">Focus</span><span class="v">Health Literacy • Access • Offline Support</span></div>
                 </div>
 
                 <div class="heroCase-actions">
                   <a class="btn btn-primary" href="https://gracemccaffrey.github.io/HealthHub/" id="liveDemoBtn">View Live Demo</a>
-                  <a class="btn btn-outline" href="#" id="reportBtn">Full Technical Report</a>
+                  <a class="btn btn-outline" href="assets/HealthHubReport.pdf" target="_blank" rel="noopener"id="reportBtn">Full Technical Report</a>
                 </div>
 
                 <p class="muted heroCase-note">
@@ -168,17 +168,6 @@
               </div>
             </div>
           </div>
-
-          <aside class="card card-soft">
-            <h3 class="card-title">Challenges</h3>
-            <div class="divider"></div>
-            <ul class="fact-list">
-              <li><span class="dot"></span> Limited access to nearby providers</li>
-              <li><span class="dot"></span> Medical terminology confusion</li>
-              <li><span class="dot"></span> Financial & insurance barriers</li>
-              <li><span class="dot"></span> Poor broadband access in rural regions</li>
-            </ul>
-          </aside>
         </div>
       </section>
 
@@ -192,24 +181,37 @@
             <article class="card contextCard">
               <h3 class="contextTitle"><i data-lucide="users"></i> Social & Cultural Context</h3>
               <p class="muted">
-                Rural communities can have lower trust in external systems, and some populations have limited
-                technology adoption. Designing for clarity and trust was essential.
+                Research into rural Ohio communities shaped several core design decisions. 
+                Lower trust in external systems and limited technology adoption among some 
+                populations -- including communities where smartphone use is minimal -- meant
+                the platform needed to feel familiar and straightforward rather than novel or 
+                complex. We prioritized plain-language content, predictable navigation, and a 
+                design aesthetic that aligned with established healthcare website conventions 
+                to build immediate credibility with users who might otherwise disengage.
               </p>
             </article>
 
             <article class="card contextCard">
               <h3 class="contextTitle"><i data-lucide="cloud"></i> Physical Constraints</h3>
               <p class="muted">
-                Poor connectivity and device limitations meant we prioritized lightweight pages, mobile-first UX,
-                and offline fallbacks.
+                Many users in the target demographic rely on cellular data rather than broadband, 
+                and some areas of rural Ohio have no reliable connectivity at all. This directly 
+                drove the decision to build a PWA with offline fallback functionality -- not as a 
+                feature addition, but as a core requirement. Pages were kept lightweight, images 
+                minimal, and the provider dataset was scoped to central Ohio specifically to keep 
+                the offline JSON file small enough to load without performance impact on older devices.
               </p>
             </article>
 
             <article class="card contextCard">
               <h3 class="contextTitle"><i data-lucide="heart-pulse"></i> Health Literacy Gaps</h3>
               <p class="muted">
-                Many users struggle to interpret health information. We focused on plain-language definitions,
-                FAQs, and predictable navigation patterns.
+                A significant portion of the target population struggles to navigate healthcare systems, 
+                understand medical terminology, or know what to expect from an appointment. Rather 
+                than presenting raw provider data, we built dedicated Terminology and FAQ sections 
+                with plain-language definitions and answers to common questions about insurance, 
+                paperwork, and appointments -- all delivered through a dynamic content injection 
+                system that kept the interface clean and scannable.
               </p>
             </article>
           </div>
@@ -251,7 +253,9 @@
                 <h3>Offline Fallback Dataset</h3>
               </div>
               <p class="muted">
-                When internet is limited, users can still search a curated local provider dataset by ZIP code.
+                When internet is unavailable, users can still search a curated central 
+                Ohio provider dataset by ZIP code -- a deliberate scoping decision that 
+                balances offline accessibility with app performance.
               </p>
             </article>
 
@@ -263,6 +267,30 @@
               <p class="muted">
                 Designed for small screens and low-bandwidth environments with clear hierarchy and readable
                 typography.
+              </p>
+            </article>
+
+            <article class="card featureCard">
+              <div class="featureHead">
+                <i data-lucide="file-json"></i>
+                <h3>Modular Health Content System</h3>
+              </div>
+              <p class="muted">
+                FAQ and terminology content is stored in external JSON files 
+                and injected dynamically, keeping content updates completely 
+                separate from the HTML structure.
+              </p>
+            </article>
+
+            <article class="card featureCard">
+              <div class="featureHead">
+                <i data-lucide="filter"></i>
+                <h3>Provider Data Pipeline</h3>
+              </div>
+              <p class="muted">
+                Provider results are filtered, deduplicated, and scoped to 
+                keep search results clean, relevant, and fast -- even when 
+                pulling from a large government dataset.
               </p>
             </article>
           </div>
@@ -293,7 +321,7 @@
                   <div class="tlBody">
                     <h3>Maps: Google Maps API</h3>
                     <p class="muted">
-                      Selected for geospatial accuracy, documentation quality, and reliable routing/navigation support.
+                      Selected for geospatial accuracy, reliable routing/navigation support, and smooth mobile integration.
                     </p>
                   </div>
                 </div>
@@ -303,7 +331,11 @@
                   <div class="tlBody">
                     <h3>Offline Strategy: Curated Dataset</h3>
                     <p class="muted">
-                      A full-state dataset was too large for fast loading. We implemented a Central Ohio offline dataset to balance performance and access.
+                      A full-state dataset was too large to load without 
+                      compromising performance on older, low-bandwidth devices. 
+                      We scoped the offline fallback to central Ohio -- the 
+                      primary target demographic -- balancing accessibility 
+                      with app speed.
                     </p>
                   </div>
                 </div>
@@ -314,8 +346,10 @@
               <h3 class="card-title">Why it matters</h3>
               <div class="divider"></div>
               <p class="muted">
-                These decisions prioritize usability in real-world constraints: limited connectivity, older devices,
-                and users who need simple, trustworthy information quickly.
+                Every decision on this project was made with a specific user in mind 
+                -- someone in a rural area, on an older phone, with inconsistent connectivity, 
+                who may not be comfortable navigating complex interfaces. The platform choices 
+                reflect that reality at every layer, from data architecture down to typography.
               </p>
             </aside>
           </div>
@@ -353,7 +387,13 @@
                 </div>
               </div>
               <p class="muted" style="margin-top: 14px;">
-                Data is filtered, deduplicated, and limited to keep results readable and performant.
+                The client handles all filtering, deduplication, and content 
+                injection directly in the browser -- there is no custom backend. 
+                This was a deliberate choice to keep the platform free to host, 
+                easy to maintain, and functional without a server dependency. 
+                Provider data flows from the NPPES API at search time, with the 
+                local JSON fallback stepping in automatically when connectivity 
+                is unavailable.
               </p>
             </div>
 
@@ -362,9 +402,9 @@
               <div class="divider"></div>
               <ul class="fact-list">
                 <li><span class="dot"></span> Frontend: HTML, CSS, JavaScript</li>
-                <li><span class="dot"></span> Data: NPPES API + curated JSON fallback</li>
+                <li><span class="dot"></span> Data: NPPES/CMS API + curated JSON fallback</li>
                 <li><span class="dot"></span> Mapping: Google Maps API</li>
-                <li><span class="dot"></span> Patterns: modular content injection, filtering, dedupe</li>
+                <li><span class="dot"></span> Architecture: Client-side filtering pipeline, provider deduplication logic, dynamic content injection, offline-first fallback strategy</li>
               </ul>
             </aside>
           </div>
@@ -379,13 +419,30 @@
 
           <div class="accordion" data-accordion>
             <button class="accItem" aria-expanded="false">
+              <span class="accTitle">API pivot: Google Places to NPPES/CMS</span>
+              <span class="accIcon" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+            </button>
+            <div class="accPanel" hidden>
+              <p class="muted">
+                The platform was originally designed around the Google Places API for provider discovery. During 
+                development it became clear that Places lacked the structured data HealthHub needed -- no taxonomy 
+                codes, specialty classifications, or facility type metadata. We pivoted to the NPPES API provided by 
+                CMS, which offered all of this in a structured format. The tradeoff was that NPPES returns far more 
+                noise than Places, which is what drove the need for the filtering pipeline built on top of it.
+              </p>
+            </div>
+
+            <button class="accItem" aria-expanded="false">
               <span class="accTitle">Provider type filtering (taxonomy whitelist)</span>
               <span class="accIcon" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
             </button>
             <div class="accPanel" hidden>
               <p class="muted">
-                The NPPES API returns many entries outside the scope of “providers users would realistically visit.”
-                We filtered results using a curated set of taxonomy codes for relevant specialties.
+                The NPPES API returns many entries outside the scope of providers users would realistically visit.
+                We filtered results using a curated taxonomy code whitelist covering primary care physicians, 
+                OB/GYNs, pediatricians, mental health professionals, hospitals, and urgent care clinics -- 
+                eliminating administrative offices, suppliers, and specialty facilities outside the platform's 
+                scope.
               </p>
             </div>
 
@@ -406,8 +463,9 @@
             </button>
             <div class="accPanel" hidden>
               <p class="muted">
-                Results were limited (e.g., within a reasonable radius and capped count) to keep the UI fast and
-                prevent information overload—especially important in low-bandwidth settings.
+                Results were limited to providers within a 30-mile radius and capped at 20 provider groups per search. 
+                This kept the interface fast and navigable in low-bandwidth environments while preventing information 
+                overload for users who may not be comfortable parsing large result sets.
               </p>
             </div>
 
@@ -417,8 +475,9 @@
             </button>
             <div class="accPanel" hidden>
               <p class="muted">
-                FAQ and terminology content is stored in structured data files and injected dynamically, so content
-                updates don’t require editing HTML.
+                FAQ and terminology content is stored in structured external JSON files and injected dynamically 
+                via JavaScript, so content updates never require touching the HTML. This also ensures every entry 
+                follows a uniform expandable structure, improving consistency and accessibility across both pages.
               </p>
             </div>
           </div>
@@ -433,66 +492,28 @@
 
           <div class="grid grid-4 statsGrid">
             <div class="card statCard">
-              <div class="statTop"><i data-lucide="filter"></i><span class="statLabel">Clarity</span></div>
-              <div class="statText">Reduced provider search noise</div>
-              <p class="muted">Filtering and grouping makes results understandable at a glance.</p>
+              <div class="statTop"><i data-lucide="clipboard-check"></i><span class="statLabel">Academic Recognition</span></div>
+              <div class="statText">29/30 Design Score, 98/100 Final Grade</div>
+              <p class="muted">The interface scored highest among three evaluated designs, and the project received a 98/100 with the professor recognizing the depth of real-world research and design rigor.</p>
             </div>
 
             <div class="card statCard">
-              <div class="statTop"><i data-lucide="zap"></i><span class="statLabel">Performance</span></div>
-              <div class="statText">Improved low-bandwidth usability</div>
-              <p class="muted">Lightweight patterns keep the app responsive.</p>
+              <div class="statTop"><i data-lucide="filter-x"></i><span class="statLabel">Filtering & Deduplication</span></div>
+              <div class="statText">~60 Raw API Results Reduced to 20</div>
+              <p class="muted">Taxonomy whitelist filtering and deduplication logic cut noisy NPPES results down to clean, relevant provider groups -- making search results immediately scannable.</p>
             </div>
 
             <div class="card statCard">
-              <div class="statTop"><i data-lucide="navigation"></i><span class="statLabel">Guidance</span></div>
-              <div class="statText">Clear navigation for non-technical users</div>
-              <p class="muted">Simple structure aligned with common healthcare site expectations.</p>
+              <div class="statTop"><i data-lucide="wifi-off"></i><span class="statLabel">Offline Access</span></div>
+              <div class="statText">40 Central Ohio Providers Available Without Internet</div>
+              <p class="muted">A curated fallback dataset keeps the platform's core feature functional for users in low-connectivity environments, no network request required.</p>
             </div>
 
             <div class="card statCard">
-              <div class="statTop"><i data-lucide="accessibility"></i><span class="statLabel">Accessibility</span></div>
-              <div class="statText">Readable UI & predictable interactions</div>
-              <p class="muted">Designed for scanning, comprehension, and mobile-first access.</p>
+              <div class="statTop"><i data-lucide="users"></i><span class="statLabel">Community-Informed Design</span></div>
+              <div class="statText">Built Around Real User Research</div>
+              <p class="muted">Design decisions were grounded in direct consultation with rural central Ohioans, ensuring the platform addressed actual barriers rather than assumed ones.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 9) SUSTAINABILITY & ETHICS -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Sustainability & Ethics</h2>
-          <div class="divider"></div>
-
-          <div class="grid grid-2">
-            <article class="card">
-              <h3 class="card-title">Environmental Considerations</h3>
-              <div class="divider"></div>
-              <p class="muted">
-                HealthHub was designed to be lightweight and reduce reliance on continuous server calls.
-                Offline support helps reduce infrastructure load while improving access.
-              </p>
-              <ul class="bulletList">
-                <li>Local JSON fallback reduces repeated network requests</li>
-                <li>Designed to run on older devices (lower hardware demands)</li>
-                <li>Open-source viability supports long-term sustainability</li>
-              </ul>
-            </article>
-
-            <article class="card card-soft">
-              <h3 class="card-title">Ethical Design</h3>
-              <div class="divider"></div>
-              <p class="muted">
-                The platform is intended as a free resource—no paywalls and no advertising—focused on empowerment,
-                clarity, and accessibility.
-              </p>
-              <ul class="bulletList">
-                <li>Plain-language content to support varied literacy levels</li>
-                <li>UX choices aimed at trust and predictable navigation</li>
-                <li>Offline-first thinking for digital equity</li>
-              </ul>
-            </article>
           </div>
         </div>
       </section>
@@ -505,22 +526,87 @@
 
           <div class="section-grid-2">
             <div class="card">
-              <h3 class="card-title">What I’d improve next</h3>
+              <h3 class="card-title">Reflection</h3>
               <div class="divider"></div>
-              <ul class="bulletList">
-                <li>Expand offline coverage beyond Central Ohio</li>
-                <li>Add multilingual support for broader accessibility</li>
-                <li>Enhance specialty filtering and care navigation guidance</li>
-                <li>Explore partnerships to improve data freshness and outreach</li>
-              </ul>
+              <p class="muted">
+                HealthHub taught me what it actually feels like to solve a problem, 
+                feel completely relieved, and then turn around and find 
+                yourself standing in front of a bigger one.
+              </p>
+              <p class="muted">
+                When the Google Places API fell short I didn't want to go to the team empty 
+                handed. I did the research on my own first, diving into healthcare data sources 
+                that none of us had any experience with, and found the NPPES/CMS API before 
+                bringing it to the group with an actual recommendation. Once we made the switch 
+                though, the relief didn't last long. I integrated the new API, ran it for the 
+                first time, and was immediately hit with an overwhelming number of results. 
+                Suppliers, administrative offices, duplicate entries, specialists that had 
+                nothing to do with what we were building. I had solved one problem and walked 
+                right into a harder one. The filtering pipeline and deduplication logic I built 
+                after that came directly from that moment of realizing the data just couldn't 
+                be trusted at face value.
+              </p>
+              <p class="muted">
+                Taking ownership of the UX and frontend pushed me in ways I didn't totally expect 
+                going in. Healthcare sites have to earn trust before a user reads a single word, and 
+                that trust lives in the design. I was designing for a community that needed something that 
+                felt real and approachable, that worked on older phones, that didn't assume any technical 
+                comfort level. There were so many things to hold at once and I loved every second of it. 
+                That is exactly the kind of challenge I am here for, the kind that asks me to be creative 
+                and analytical at the same time.
+              </p>
+              <p class="muted">
+                If I could go back and change things there are two I keep coming back to. The first is the 
+                visual direction. We used orange and went for a younger, more modern look to set ourselves apart a 
+                little, and while that landed well with the younger people we spoke to during research, I think it 
+                worked against us with older users who are honestly the ones who need this resource the most. Trust 
+                is easy to lose through a design decision and I think about that one a lot. The second is the 
+                data architecture. Building toward a database backed system from the start would have made 
+                everything so much more adaptable down the line. Region specific FAQs, multilingual support, 
+                localized content, none of that scales well out of static JSON files. It was the right call for the 
+                scope and timeline we had but if I was starting over I would build the foundation with more of 
+                that long term thinking in mind.
+              </p>
+              <p class="muted">
+                What made this feel like more than just a class project was that our end user was never just a concept. 
+                We talked to real people living in rural central Ohio. We understood what their days actually looked 
+                like and what was getting in the way of them accessing care. That changed how I approached every single 
+                decision. It stopped being about what would impress a professor and started being about what would actually 
+                work for someone who needed it. I care a lot about using what I can do to help people and this project is 
+                the clearest example I have of that. I am really proud of how real it looks, how far we went beyond what was 
+                required, and honestly what it showed me I was capable of.
+              </p>
             </div>
 
             <aside class="card card-soft">
-              <h3 class="card-title">Key takeaway</h3>
+              <h3 class="card-title">Looking Ahead</h3>
               <div class="divider"></div>
               <p class="muted">
-                Research-informed design + practical implementation tradeoffs led to a solution that stays usable
-                under real-world constraints.
+                HealthHub is functional and I am proud of what it is right now, but there is a clear path to what it could become.
+              </p>
+              <p class="muted">
+                The most immediate need is expanding the offline dataset beyond central Ohio. The current fallback c
+                overs 40 providers across one region -- meaningful for the community we built it for, but a significant 
+                limitation for anyone outside that area. Broadening that coverage would be the first step toward making 
+                the platform a genuinely national resource.
+              </p>
+              <p class="muted">
+                The most immediate need is expanding the offline dataset beyond central Ohio. The current fallback c
+                overs 40 providers across one region -- meaningful for the community we built it for, but a significant 
+                limitation for anyone outside that area. Broadening that coverage would be the first step toward making 
+                the platform a genuinely national resource.
+              </p>
+              <p class="muted">
+                The data architecture change I mentioned in my reflection would unlock a lot of what comes next. Moving from static JSON files to a database backed system would make it possible to serve region specific content -- FAQs and terminology tailored to the barriers that actually exist in a given area, because a rural community in Appalachian Ohio faces different challenges than one in rural New Mexico.
+              </p>
+              <p class="muted">
+                Multilingual support is another natural next step. The platform currently only serves English speakers, which immediately excludes a meaningful portion of the rural communities it was built for.
+              </p>
+              <p class="muted">
+                On the features side, more granular specialty filtering, appointment navigation guidance, and patient reviews would all make the provider search more useful. And a partnership with a public health organization or community health system would solve the hardest long term problem -- keeping the provider data accurate without manual updates.
+              </p>
+              <p class="muted">
+                The foundation is there. These are not rebuilds, they are extensions of decisions that were already made with this kind of growth in mind.
               </p>
             </aside>
           </div>
@@ -538,7 +624,7 @@
             <a class="btn btn-primary" href="https://github.com/gracemccaffrey/HealthHub" target="_blank" rel="noopener">
               View Code
             </a>
-            <a class="btn btn-outline" href="#" id="reportBtnBottom">Read Full Report</a>
+            <a class="btn btn-outline" href="assets/HealthHubReport.pdf" target="_blank" rel="noopener" id="reportBtnBottom">Read Full Report</a>
             <a class="btn btn-outline" href="index.html#contact">Contact Me</a>
           </div>
 
